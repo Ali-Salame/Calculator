@@ -1,0 +1,263 @@
+*,*::after,*::before {
+    box-sizing: border-box
+}
+:root {
+    --ff-main_font: 'League Spartan', sans-serif;
+}
+/* Theme 1 */
+.theme_1 {
+    /*Backgrounds colors*/
+
+    --clr-main_background: hsl(222, 26%, 31%);
+    --clr-keypad_background: hsl(223, 31%, 20%);
+    --clr-screen_background: hsl(224, 36%, 15%);
+    /*Keys colors */
+
+    --clr-key_del: hsl(225, 21%, 49%);
+    --clr-key_del_shadow: hsl(224, 28%, 35%);
+
+    --clr-key_equal: hsl(6, 63%, 50%);
+    --clr-key_equal_button: hsl(6, 70%, 34%);
+    --clr-key-equal-text:rgb(255, 255, 255);
+    --clr-key-result-text:rgb(255, 255, 255);
+
+    --clr-key_background: rgb(255, 255, 255);
+    --clr-key_shadow: hsl(28, 16%, 65%);
+    /* Text */
+    
+    --clr-key_text: hsl(221, 14%, 31%);
+    --clr-normal_text: rgb(255, 255, 255);
+
+    --clr-title: rgb(255, 255, 255);
+
+}  
+/* Theme 2 */
+.theme_2 {
+    --clr-main_background: hsl(0, 0%, 90%);
+    --clr-keypad_background: hsl(0, 5%, 81%);
+    --clr-screen_background: hsl(0, 0%, 93%);
+
+    /* Keys */
+
+    --clr-key_del: hsl(185, 42%, 37%);
+    --clr-key_del_shadow: hsl(185, 58%, 25%);
+
+    --clr-key_equal: hsl(25, 98%, 40%);
+    --clr-key_equal_button: hsl(25, 99%, 27%);
+
+    --clr-key-equal-text:rgb(255, 255, 255);
+    --clr-key-result-text:rgb(255, 255, 255);
+
+    --clr-key_background: hsl(45, 7%, 89%);
+    --clr-key_shadow: hsl(35, 11%, 61%);
+
+    /* Text */
+    
+    --clr-key_text: hsl(60, 10%, 19%);
+    --clr-normal_text: hsl(0, 0, 100%);
+
+    --clr-title: hsl(60, 10%, 19%);
+    }
+
+/* Theme 3 */ 
+.theme_3 {
+    --clr-main_background: hsl(268, 75%, 9%);
+    --clr-keypad_background: hsl(268, 71%, 12%);
+    --clr-screen_background : hsl(268, 71%, 12%);
+
+    /* Keys */
+
+    --clr-key_del: hsl(281, 89%, 26%);
+    --clr-key-del_shadow: hsl(285, 91%, 52%);
+
+    --clr-key_equal: hsl(176, 100%, 44%);
+    --clr-key_equal_button: hsl(177, 92%, 70%);
+
+    --clr-key-equal-text:rgb(0, 0, 0);
+    --clr-key-result-text:rgb(255, 255, 255);
+
+    --clr-key_background: hsl(268, 47%, 21%);
+    --clr-key_shadow: hsl(290, 70%, 36%);
+
+    /* Text */
+    --clr-key_text: hsl(52, 100%, 62%);
+    --clr-normal_text: rgb(255, 255, 255);
+
+    --clr-title:hsl(52, 100%, 62%);
+}
+ 
+
+.attribution {
+    color: white;
+    text-decoration: none;
+}
+html {
+    margin: 10px;
+    font-family: var(--ff-main_font);
+}
+body {
+    background-color: var(--clr-main_background) ;
+    font-size: 32px; 
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+
+.main_container {
+    margin-top: 5%;
+    display:flex;
+    flex-direction: column;
+    min-width: 399px;
+    max-width: 410px;
+}
+    .secondry_containers_title {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        color: var(--clr-title);
+        margin: 20px;
+    }
+    .secondry_containers_title_2 {
+        display: flex;
+        flex-direction:column;
+    }
+    .numbers {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        font-size: 16px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .secondry_containers_title input {
+            height: 20px;
+            width: 20px;
+            appearance: none;
+            background-color: var(--clr-key_equal);
+            border-radius: 50%;
+            opacity: 0;
+    }
+    .secondry_containers_title input:hover {
+            cursor: pointer;
+        }
+        .calc_title_text {
+            color: var(--clr-title);
+            font-size: 32px;
+        }
+        .tri-state-toggle {
+            display: flex;
+            justify-content: center;
+            border: none;
+            border-radius: 50px;
+            height: 26px;
+            background-color: var(--clr-screen_background);
+            position: relative;
+          }
+        .tri-state-toggle::before {
+            content: "Theme:";
+            position: absolute;
+            font-size: 16px;
+            left: -60px;
+            top: 6px;
+        }
+        #one {
+            opacity: 1;
+        }
+
+
+
+    .secondry_containers_input {
+        height: 80px;
+        
+    }
+        .input_main {
+            display: flex;
+            height: 80px;
+            width: 100%;
+            background-color: var(--clr-screen_background);
+            border: 0px solid var(--clr-screen_background);
+            border-radius: 10px; 
+            justify-content: end;
+            align-items: center;
+        }
+        .input_main p {
+            color: var(--clr-title);
+            margin-right: 20px;
+        }
+
+
+    .secondry_containers_keys {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 25px;
+        background-color: var(--clr-keypad_background);
+        width: 100%;
+        border-radius: 10px;
+        flex-direction: column;
+        
+    }
+        .numpad_container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            padding-top: 30px;
+            padding-bottom: 20px;
+            padding-left: 20px;
+            padding-right: 20px;
+            
+        }
+        .numpad_container button {
+            width: 65px;
+            height: 60px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 4px var(--clr-key_shadow);
+            border: none;
+            font-family: var(--ff-main_font);
+            font-size: 32px;
+            color: var(--clr-key_text);
+            background-color: var(--clr-key_background);
+            cursor: pointer;
+        }
+        .numpad_container button:active{
+            opacity: 0.5;
+        }
+        .numpad_container .del_btn {
+            font-size: 26px;
+            color: white;
+            background-color: var(--clr-key_del);
+            box-shadow: 0px 4px  4px var(--clr-key_del_shadow);
+        }
+        .result_equal_div {
+        display: flex;
+        flex: row;
+        width: 100%;
+        justify-content: center;
+    }
+    .result_equal_div button {
+        height: 55px;
+        width: 155px;
+        margin: 10px 15px;
+        margin-top: 0px;
+        margin-bottom: 20px;
+        border-radius: 10px;
+        margin-right: 0px;
+        font-size: 25px;
+        font-family: var(--ff-main_font);
+        border: none;
+        box-shadow: 0px 4px 4px var(--clr-key_del_shadow);
+        background-color: var(--clr-key_del);
+        cursor: pointer;
+    }
+    .result_equal_div button:active {
+        opacity: 0.5;
+    }
+    .result_equal_div button+button {
+        margin-left: 10px;
+        background-color: var(--clr-key_equal);
+        border: none;
+        box-shadow: 0px 4px 4px var(--clr-key_equal_button);
+    }

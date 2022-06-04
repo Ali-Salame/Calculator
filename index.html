@@ -1,0 +1,77 @@
+<!DOCTYPE html id="html">
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <div class="attribution">
+    Coded by <a href="#"><span class="attribution">Ali Salame</span></a>.
+  </div>
+  
+  <div class="main_container">
+    <div class="secondry_containers_title">
+      <div >
+        <div class="calc_title_text">calc</div>
+      </div>
+      <div class="secondry_containers_title_2">
+        <div class="numbers">
+          <div>1</div>
+          <div>2</div>
+          <div>3</div>
+        </div>
+        <div class="tri-state-toggle">
+          <input class="switch" type="radio" name="toggle" id="one" />
+          <input class="switch" type="radio" name="toggle" id="two" />
+          <input class="switch" type="radio" name="toggle" id="three" />
+        </div>
+    </div>
+    </div>
+    <div class="secondry_containers_input">
+      <div class="input_main">
+        <p class="number" id="input_value">0</p>
+      </div>
+    </div>
+    <div class="secondry_containers_keys">
+      <div class="numpad_container">
+        <button id="7" onclick="reply_click(7)">7</button>
+        <button id="8" onclick="reply_click(8)">8</button>
+        <button id="9" onclick="reply_click(9)">9</button>
+        <button class="del_btn" onclick="reply_click('DEL')">DEL</button>
+        <button id="4" onclick="reply_click(4)">4</button>
+        <button id="5" onclick="reply_click(5)">5</button>
+        <button id="6" onclick="reply_click(6)">6</button>
+        <button id="+" onclick="reply_click('+')">+</button>
+        <button id="1" onclick="reply_click(1)">1</button>
+        <button id="2" onclick="reply_click(2)">2</button>
+        <button id="3" onclick="reply_click(3)">3</button>
+        <button id="-" onclick="reply_click('-')">-</button>
+        <button id="." onclick="reply_click('.')">.</button>
+        <button id="0" onclick="reply_click(0)">0</button>
+        <button id="/" onclick="reply_click('/')">/</button>
+        <button id="*" onclick="reply_click('*')">x</button>
+      </div>
+      <div class="result_equal_div">
+        <button class="result1" id="reset" onclick="reset()" style="color: var(--clr-key-result-text);">RESET</button>
+        <button id="=" class="equal1" onclick="end_result()" style="color: var(--clr-key-equal-text);">=</button>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="JavaScript/rendering.js"></script>
+  <script type="text/javascript" src="JavaScript/calculator.js"></script>
+  <script type="text/javascript" src="JavaScript/theme.js"></script>
+</body>
+</html>
